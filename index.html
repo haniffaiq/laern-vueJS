@@ -6,8 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Learning VueJS</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
+
+    <div id="greeting">
+        <h1>{{ greet }}</h1>
+    </div>
+
+        
+
+    <div id="visitor">
+        <input type="text"  placeholder="Enter your name" v-model="name">
+        <h3 id="visit"> Hello  {{ name }} </h3>
+    </div>
+
+
     <script src="main.js"></script>
 </body>
 </html>
