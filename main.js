@@ -11,10 +11,3 @@ var visitor = new Vue({
         name
     }
 })
-
-var paragraf = new Vue({
-    el: '#app',
-    data: {
-        paragraf:"Hanif faiq"
-    }
-})
