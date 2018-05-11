@@ -10,16 +10,22 @@
 </head>
 <body>
 
-    <div id="greeting">
-        <h1>{{ greet }}</h1>
-    </div>
-
-        
-
-    <div id="visitor">
-        <input type="text"  placeholder="Enter your name" v-model="name">
-        <h3 id="visit"> Hello  {{ name }} </h3>
+    <div id="vue-app">
+        <h1>
+            {{ greet }}
+        </h1>
+        <h3>
+            Hello {{name}}
+        </h3>
+       
+        <span>
+             <input type="text"  placeholder="Enter your name" v-model="name">
+             <button v-on:click="submit" >Submit</button>
+        </span>
+        <h1 v-on:mousemove="submit">
+            {{x}}, {{y}}
+        </h1>
     </div>
     <script src="main.js"></script>
-</body>
+</body> 
 </html>

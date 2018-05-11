@@ -1,13 +1,18 @@
-var app = new Vue({
-    el:'#greeting',
+new Vue({
+    el:'#vue-app',
     data:{
-        greet:"Welcome to Vuejs Learn page"      
-    }
-})
+        greet:"Welcome to Vuejs Learn page",      
+        name, 
+        x: 0,
+        y: 0
+    },
+    methods:{
+        submit: function(event){
+            console.log(this.name)
+            console.log(event)
 
-var visitor = new Vue({
-    el:'#visitor',
-    data: {
-        name
+            this.x = event.x
+            this.y = event.y
+        }
     }
 })
