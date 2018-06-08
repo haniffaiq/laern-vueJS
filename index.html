@@ -11,20 +11,42 @@
 <body>
 
     <div id="vue-app">
-        <h1>
-            {{ greet }}
-        </h1>
-        <h3>
-            Hello {{name}}
-        </h3>
-       
+        <div id="greeting">
+            <h1>
+                {{ greet }}
+            </h1>
+            <h3>
+                Hello {{name}}
+            </h3>
+            <h3>
+                My age is {{ age }}
+            </h3>
+        </div>
+        <div id="age" >
+            <button v-on:click="add(1)">add </button>
+            <button v-on:click="substract(1)">substract </button>
+            <button v-on:click="add(10)">add 10 </button>
+            <button v-on:click="substract(10)">substract 10 </button>
+        </div>
         <span>
-             <input type="text"  placeholder="Enter your name" v-model="name">
+             <input type="text"  placeholder="Enter your name" v-model="setName">
              <button v-on:click="submit" >Submit</button>
         </span>
-        <h1 v-on:mousemove="submit">
-            {{x}}, {{y}}
-        </h1>
+        <div id="coordinate" >
+            <h1 v-on:mousemove="submit">
+                {{x}}, {{y}}
+            </h1>
+        </div>
+
+        <div id="computed-properties">
+            <button v-on:click="a++">add A</button>
+            <button v-on:click="b++">add B</button>
+
+            <p>A = {{a}}</p>
+            <p>B = {{b}}</p>
+            <p>age + A = {{addToA}}</p>
+            <p>age + B = {{addToB}}</p>
+        </div>
     </div>
     <script src="main.js"></script>
 </body> 
