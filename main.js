@@ -20,7 +20,7 @@ new Vue({
         },
         add(value){
             this.age = this.age + value
-            // that's code same like //this,age = this.age + 1
+            // that's code same like //this.age = this.age + 1
         },
         substract(value){
             this.age = this.age - value
