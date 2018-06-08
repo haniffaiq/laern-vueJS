@@ -7,10 +7,13 @@
     <title>Learning VueJS</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
 </head>
 <body>
 
-    <div id="vue-app">
+    <div id="vue-app" v-on:mousemove="cordinate">
         <div id="greeting">
             <h1>
                 {{ greet }}
@@ -23,24 +26,30 @@
             </h3>
         </div>
         <div id="age" >
-            <button v-on:click="add(1)">add </button>
-            <button v-on:click="substract(1)">substract </button>
-            <button v-on:click="add(10)">add 10 </button>
-            <button v-on:click="substract(10)">substract 10 </button>
+            <button class="add" v-on:click="add(1)">add </button>
+            <button class="min" v-on:click="substract(1)">substract </button>
+            <button class="add" v-on:click="add(10)">add 10 </button>
+            <button class="min" v-on:click="substract(10)">substract 10 </button>
         </div>
-        <span>
-             <input type="text"  placeholder="Enter your name" v-model="setName">
-             <button v-on:click="submit" >Submit</button>
-        </span>
+        <br>
+        <div id="nameInput">
+             <input 
+             type="text"  
+             placeholder="Enter your name" 
+             v-model="setName"
+             v-on:keyup.enter="submitName">
+             <button v-on:click="submit">Submit</button>
+        </div>
+        <br>
         <div id="coordinate" >
-            <h1 v-on:mousemove="submit">
+            <h1>
                 {{x}}, {{y}}
             </h1>
         </div>
 
         <div id="computed-properties">
-            <button v-on:click="a++">add A</button>
-            <button v-on:click="b++">add B</button>
+            <button class="add" v-on:click="a++">add A</button>
+            <button class="add" v-on:click="b++">add B</button>
 
             <p>A = {{a}}</p>
             <p>B = {{b}}</p>

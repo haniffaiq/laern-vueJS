@@ -1,10 +1,40 @@
-h1,h3{
-    text-align: center
+h1,
+h3 {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive
 }
 
 #age {
+    text-align: center;
+}
+
+#coordinate {
     text-align: center
 }
-#coordinate{
-    
+
+#textArea {
+    border-style: solid;
+    border-width: 2px;
+    text-align: center
 }
+
+button {
+    padding: 10px;
+    border: hidden
+}
+
+button.add {
+    background-color: greenyellow;
+}
+button.min{
+    background-color: tomato;
+    color:white
+}
+
+#nameInput{
+    text-align: center
+}
+

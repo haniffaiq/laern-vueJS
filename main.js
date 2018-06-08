@@ -11,12 +11,15 @@ new Vue({
         b : 0
     },
     methods:{
+        cordinate: function(event){
+            //console.log(event)
+            this.x = event.x
+            this.y = event.y 
+        },
         submit: function(event){
-            //console.log(this.setName)
             //console.log(event)
             this.name = this.setName
-            this.x = event.x
-            this.y = event.y
+            console.log(this.name)
         },
         add(value){
             this.age = this.age + value
@@ -25,6 +28,11 @@ new Vue({
         substract(value){
             this.age = this.age - value
         },
+        submitName:function(event){
+            this.name = this.setName
+            console.log(this.name)
+            console.log("key : " + event.key)
+        }
         /*addToA(){
             console.log("ageToA")
             return this.age + this.a
